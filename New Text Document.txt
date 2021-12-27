@@ -1,0 +1,1 @@
+SELECT product_type,product_name,first_name,last_name,addr,phn_no,email FROM orders INNER JOIN products ON orders.product_number=products.product_number INNER JOIN customer_details ON orders.customer_id=customer_details.customer_id ORDER BY orders.order_id DESC;

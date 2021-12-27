@@ -1,0 +1,22 @@
+select jewellery_name,jewellery_image ,jewellery_type, jewellery_info ,buy_price from jewellery 
+  inner join buy_jewellery on buy_jewellery.jewellery_id= jewellery.jewellery_id ORDER BY buy_jewellery.buy_id DESC;
+
+
+
+
+
+select first_name,last_name, customer_address,phone_number,customer_email from customer_details 
+  inner join buy_jewellery on buy_jewellery.customer_id= customer_details.customer_id ORDER BY buy_jewellery.buy_id DESC;
+
+
+
+
+SELECT * FROM buy_jewellery INNER JOIN jewellery ON buy_jewellery.jewellery_id=jewellery.jewellery_id INNER JOIN customer_details ON buy_jewellery.customer_id=customer_details.customer_id;
+
+
+
+
+SELECT jewellery_name,jewellery_image,jewellery_type,jewellery_info,buy_price,first_name,last_name,customer_address,phone_number,customer_email FROM buy_jewellery INNER JOIN jewellery ON buy_jewellery.jewellery_id=jewellery.jewellery_id INNER JOIN customer_details ON buy_jewellery.customer_id=customer_details.customer_id ORDER BY buy_jewellery.buy_id DESC;
+
+
+SELECT jewellery_name,jewellery_image,jewellery_type,jewellery_info,borrow_price,borrow_day,borrow_total,emi_type,first_name,last_name,customer_address,phone_number,customer_email FROM borrow_jewellery INNER JOIN jewellery ON borrow_jewellery.jewellery_id=jewellery.jewellery_id INNER JOIN customer_details ON borrow_jewellery.customer_id=customer_details.customer_id ORDER BY borrow_jewellery.borrow_id DESC;
